@@ -2,8 +2,9 @@
 typescript实现axios
 
 ### 目录
-
+```
 axios-typescript
+├── example // 学习 ts 的例子
 ├── code-of-conduct.md
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -20,6 +21,7 @@ axios-typescript
 │   └── semantic-release-prepare.ts
 ├── tsconfig.json
 └── tslint.json
+```
 
 ### 关联远程仓库
 ```
