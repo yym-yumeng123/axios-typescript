@@ -1,7 +1,7 @@
 import { isDate, isObject } from './util'
 
 /**
- * 把特殊编码转换回去
+ * 把字符串作为 URI 组件进行编码
  * @param val
  */
 function encode(val: string): string {
