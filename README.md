@@ -41,6 +41,17 @@ npm run commit
 ```
 
 #### 1. 处理url
-
+- `helpers/url.js`
+- 测试代码 `demo/base`
 
 #### 2. 处理body
+```js
+export const transformRequest = (data: any): any => {
+  // 如果是普通对象
+  if(isPlainObject(data)) {
+    return JSON.stringify(data)
+  }
+
+  return data
+}
+```
