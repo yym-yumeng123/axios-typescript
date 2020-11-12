@@ -16,6 +16,5 @@ export const isDate = (val: any): val is Date => {
 
 // 普通对象, 非 formData
 export const isPlainObject = (val: any): val is Object => {
-  return toString.call(val) === '[object, Object]'
+  return toString.call(val) === '[object Object]'
 }
-
