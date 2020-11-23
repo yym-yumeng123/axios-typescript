@@ -13,7 +13,9 @@ const axios = (config: AxiosRequestConfig): void => {
 const processConfig = (config: AxiosRequestConfig): void => {
   // 1. 处理 url
   config.url = transformURL(config)
-  // 2. 处理 data
+  // 2. 处理 headers
+  config.headers = transfromHeaders(config)
+  // 3. 处理 data
   config.data = transfromRequestData(config)
 }
 
@@ -26,8 +28,20 @@ const transformURL = (config: AxiosRequestConfig): string => {
   return buildURL(url, params)
 }
 
+/**
+ *
+ * @param config 请求data
+ */
 const transfromRequestData = (config: AxiosRequestConfig): any => {
   return transformRequest(config.data)
+}
+
+/**
+ * 处理 heaers
+ */
+const transfromHeaders = (config: AxiosRequestConfig): any => {
+  const { headers = {}, data } = config
+  return processHeaders(headers, data)
 }
 
 export default axios
