@@ -10,9 +10,9 @@ const axios = (config: AxiosRequestConfig): void => {
 }
 
 const processConfig = (config: AxiosRequestConfig): void => {
-  // 处理 url
+  // 1. 处理 url
   config.url = transformURL(config)
-  // 处理 data
+  // 2. 处理 data
   config.data = transfromRequestData(config)
 }
 
