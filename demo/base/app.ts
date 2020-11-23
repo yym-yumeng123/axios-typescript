@@ -67,7 +67,7 @@ axios({
   // 带 hash
   url: '/base/get#hash',
   params: {
-    foo: 'barHash',
+    foo: 'barHash'
   }
 })
 
@@ -78,10 +78,9 @@ axios({
   method: 'get',
   url: '/base/get?foo=bar',
   params: {
-    baz: 'bar?',
+    baz: 'bar?'
   }
 })
-
 
 /**
  * 处理 data 后
@@ -95,9 +94,23 @@ axios({
   }
 })
 
-const arr = new Int32Array([21, 31])
+// const arr = new Int32Array([21, 31])
+// axios({
+//   method: 'post',
+//   url: '/base/buffer',
+//   data: arr
+// })
+
+// headers
 axios({
   method: 'post',
-  url: '/base/buffer',
-  data: arr
+  url: '/base/post',
+  headers: {
+    'content-type': 'application/json',
+    'Accept': 'application/json, text/plain, */*'
+  },
+  data: {
+    a: 1,
+    b: 2
+  }
 })

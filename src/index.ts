@@ -2,6 +2,7 @@ import { AxiosRequestConfig } from './types/index'
 import xhr from './xhr'
 import { buildURL } from './helpers/url'
 import { transformRequest } from './helpers/data'
+import { processHeaders } from './helpers/header'
 
 const axios = (config: AxiosRequestConfig): void => {
   // 处理 config 配置
