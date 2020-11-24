@@ -107,10 +107,34 @@ axios({
   url: '/base/post',
   headers: {
     'content-type': 'application/json',
-    'Accept': 'application/json, text/plain, */*'
+    Accept: 'application/json, text/plain, */*'
   },
   data: {
     a: 1,
     b: 2
   }
+})
+
+// promise
+axios({
+  method: 'post',
+  url: '/base/post',
+  data: {
+    a: 11,
+    b: 22
+  }
+}).then(res => {
+  console.log(res, 'res...')
+})
+
+axios({
+  method: 'post',
+  url: '/base/post',
+  responseType: 'json',
+  data: {
+    a: 33,
+    b: 44
+  }
+}).then(res => {
+  console.log(res, 'res...responseType')
 })
