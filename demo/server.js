@@ -37,7 +37,8 @@ router.get('/base/get', function(req, res) {
 })
 
 router.post('/base/post', function(req, res) {
-  res.json(req.query)
+  console.log(req.body, '赛宫');
+  res.json(req.body)
 })
 
 router.post('/base/buffer', function(req, res) {
